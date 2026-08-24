@@ -6,6 +6,7 @@
   --muted: #555;
   --rule: #999;
   --accent: #1a4d80;
+  --bg: #f4f2ec;   /* eggshell / light warm grey */
 }
 
 * { box-sizing: border-box; }
@@ -13,7 +14,7 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--ink);
-  background: #fff;
+  background: var(--bg);
   max-width: 46rem;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 3rem;
@@ -35,12 +36,30 @@ h1 {
 .links { margin: 0; }
 
 .photo {
-  width: 10.5rem;
-  height: 10.5rem;
+  width: 12.5rem;
+  height: 12.5rem;
   object-fit: cover;
   object-position: 50% 28%;
   border-radius: 50%;
 }
+
+nav {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: flex-end;
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+nav a {
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+nav a:hover { color: var(--accent); text-decoration: none; }
 
 hr { border: none; border-top: 1px solid var(--rule); margin: 1.1rem 0 1.4rem; }
 
@@ -73,6 +92,7 @@ footer { font-size: 0.95rem; color: var(--muted); }
 
 @media (max-width: 40rem) {
   header { flex-direction: column-reverse; }
-  .photo { width: 8.5rem; height: 8.5rem; }
+  .photo { width: 10rem; height: 10rem; }
+  nav { justify-content: center; gap: 1.1rem; }
   body { font-size: 1rem; padding-top: 1.5rem; }
 }
