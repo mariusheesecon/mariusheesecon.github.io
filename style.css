@@ -11,6 +11,9 @@
 
 * { box-sizing: border-box; }
 
+/* baseline zoom: scales the whole rem-based layout like 130% browser zoom */
+html { font-size: 130%; }
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--ink);
@@ -122,6 +125,7 @@ footer { font-size: 0.95rem; color: var(--muted); }
 .updated { font-size: 0.85rem; }
 
 @media (max-width: 40rem) {
+  html { font-size: 108%; }
   header { flex-direction: column-reverse; }
   .photo { width: 10rem; height: 10rem; }
   nav { flex-wrap: wrap; justify-content: center; }
