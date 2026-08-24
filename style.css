@@ -45,12 +45,15 @@ h1 {
 
 nav {
   display: flex;
-  gap: 1.6rem;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
   margin-bottom: 1.8rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--rule);
 }
+
+.navlinks { display: flex; gap: 1.6rem; }
 
 nav a {
   color: var(--ink);
@@ -60,6 +63,27 @@ nav a {
 }
 
 nav a:hover { color: var(--accent); text-decoration: none; }
+nav a[aria-current="page"] { color: var(--accent); }
+
+.navlogo img { height: 1.9rem; width: auto; display: block; }
+
+.pagetitle {
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+
+.sublinks { font-size: 0.95rem; margin-top: 0.4rem; }
+.soon { color: var(--muted); }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.gallery img { width: 100%; height: 13rem; object-fit: cover; display: block; }
 
 hr { border: none; border-top: 1px solid var(--rule); margin: 1.1rem 0 1.4rem; }
 
@@ -93,6 +117,7 @@ footer { font-size: 0.95rem; color: var(--muted); }
 @media (max-width: 40rem) {
   header { flex-direction: column-reverse; }
   .photo { width: 10rem; height: 10rem; }
-  nav { justify-content: center; gap: 1.1rem; }
+  nav { flex-wrap: wrap; justify-content: center; }
+  .navlinks { gap: 1.1rem; flex-wrap: wrap; justify-content: center; }
   body { font-size: 1rem; padding-top: 1.5rem; }
 }
