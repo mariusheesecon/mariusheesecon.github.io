@@ -65,7 +65,14 @@ nav a {
 nav a:hover { color: var(--accent); text-decoration: none; }
 nav a[aria-current="page"] { color: var(--accent); }
 
-.navlogo img { height: 2.7rem; width: auto; display: block; }
+.navlogo img { height: 3.4rem; width: auto; display: block; }
+
+.overview {
+  font-size: 0.98rem;
+  border-left: 2px solid var(--rule);
+  padding-left: 0.9rem;
+  margin: 0 0 1.4rem;
+}
 
 .pagetitle {
   font-size: 1.45rem;
