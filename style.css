@@ -35,9 +35,11 @@ h1 {
 .links { margin: 0; }
 
 .photo {
-  width: 10rem;
-  height: auto;
-  border: 1px solid var(--rule);
+  width: 10.5rem;
+  height: 10.5rem;
+  object-fit: cover;
+  object-position: 50% 28%;
+  border-radius: 50%;
 }
 
 hr { border: none; border-top: 1px solid var(--rule); margin: 1.1rem 0 1.4rem; }
@@ -71,6 +73,6 @@ footer { font-size: 0.95rem; color: var(--muted); }
 
 @media (max-width: 40rem) {
   header { flex-direction: column-reverse; }
-  .photo { width: 8rem; }
+  .photo { width: 8.5rem; height: 8.5rem; }
   body { font-size: 1rem; padding-top: 1.5rem; }
 }
