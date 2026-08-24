@@ -1,0 +1,76 @@
+/* Marius Hees — job market site. Design mirrors the print documents:
+   serif, single readable column, understated. */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #555;
+  --rule: #999;
+  --accent: #1a4d80;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--ink);
+  background: #fff;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+  line-height: 1.55;
+  font-size: 1.05rem;
+}
+
+header { display: flex; gap: 1.5rem; align-items: flex-start; justify-content: space-between; }
+.header-text { flex: 1; }
+
+h1 {
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.subtitle { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.jobmarket { margin: 0 0 0.5rem; font-style: italic; }
+.links { margin: 0; }
+
+.photo {
+  width: 10rem;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 1.1rem 0 1.4rem; }
+
+h2 {
+  font-size: 1.02rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.8rem 0 0.6rem;
+}
+
+h3 { font-size: 1.1rem; margin: 1rem 0 0.2rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.fields { color: var(--ink); }
+.coauthors { margin: 0 0 0.3rem; color: var(--muted); font-style: italic; }
+.status { margin: 0 0 0.4rem; color: var(--muted); font-style: italic; }
+.abstract { text-align: justify; hyphens: auto; }
+
+details { margin: 0.2rem 0 0.6rem; }
+summary { cursor: pointer; color: var(--accent); font-style: italic; }
+
+.refs { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.refs div { flex: 1 1 12rem; }
+.placement { margin-top: 0.9rem; font-size: 0.95rem; color: var(--muted); }
+
+footer { font-size: 0.95rem; color: var(--muted); }
+.updated { font-size: 0.85rem; }
+
+@media (max-width: 40rem) {
+  header { flex-direction: column-reverse; }
+  .photo { width: 8rem; }
+  body { font-size: 1rem; padding-top: 1.5rem; }
+}
